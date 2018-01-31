@@ -1,7 +1,6 @@
 require './cook'
 
 class Order
-  attr_accessor :final_masterpiece
   
   def intialize
     @final_masterpiece = []

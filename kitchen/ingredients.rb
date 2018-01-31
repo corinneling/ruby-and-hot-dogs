@@ -6,11 +6,10 @@ class Ingredients
   # end
 
   # iterate through ingredient items
-  def show_options(items)
-    items.each_with_index do |option, index|
+  def display_options(item)
+    item.each_with_index do |option, index|
       puts "#{index+1}. #{option}"
     end
   end
-
 
 end

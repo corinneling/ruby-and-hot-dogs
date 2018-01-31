@@ -33,24 +33,27 @@ class Cook
     end
   end
 
-  def get_input()
+  # stops ruby and ask user for input
+  def user_input()
     return gets.chomp.to_i
   end
 
+  # called if user chose 1 earlier
+  # shows all options and stores each selection
   def start_order()
 
-    dog.show_options
-    dog_choice = get_input
+    dog.display_options
+    dog_choice = user_input
 
-    bun.show_options
-    bun_choice = get_input
+    bun.display_options
+    bun_choice = user_input
 
-    condiments.show_options
-    condiments_choice = get_input
+    condiments.display_options
+    condiments_choice = user_input
 
+    # prints order to the command line
     puts "you ordered #{dog_choice} with a #{bun_choice} and #{condiments_choice}"
 
   end
-
 
 end
