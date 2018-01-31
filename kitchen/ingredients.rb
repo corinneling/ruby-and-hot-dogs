@@ -1,25 +1,16 @@
 class Ingredients
 
 # intialize name for prettier output of ingredients
-  def intialize(name)
-    @name = name
-  end
-
-  def name
-    @name
-  end
+  # def intialize(name)
+  #  @name = name
+  # end
 
   # iterate through ingredient items
-  def display_ingredient(items)
+  def show_options(items)
     items.each_with_index do |option, index|
-      puts "#{option.name}"
+      puts "#{index+1}. #{option}"
     end
   end
-
-  # ask user to choose an ingredient item
-    def order_ingredient(order, item, choice)
-      order = item[ choice ]
-    end
 
 
 end

@@ -1,16 +1,19 @@
-require './order'
 require './constants'
 
 class Cook
-  def initialize(menu)
+  attr_accessor :menu, :dog, :bun, :condiments
+
+  def initialize(menu, dog, bun, condiments)
     @menu = menu
+    @dog = dog
+    @bun = bun
+    @condiments = condiments
   end
 
   # welceomes & asks the user if they want to order or leave
   def serve
     puts WELCOME
-    #calls method that asks user to order or leave
-    @menu.order_or_not
+    menu.order_or_not
     # asks the user for input
     # sends that input to choose_to_order case method
     choose_to_order(gets.chomp.to_i)
@@ -22,12 +25,32 @@ class Cook
   def choose_to_order(serve_number)
     if serve_number == 1
       puts GET_MENU
-      @menu.serve_dog
+      start_order
     elsif serve_number == 2
       puts BYE
     else
       puts ERROR
     end
   end
+
+  def get_input()
+    return gets.chomp.to_i
+  end
+
+  def start_order()
+
+    dog.show_options
+    dog_choice = get_input
+
+    bun.show_options
+    bun_choice = get_input
+
+    condiments.show_options
+    condiments_choice = get_input
+
+    puts "you ordered #{dog_choice} with a #{bun_choice} and #{condiments_choice}"
+
+  end
+
 
 end
