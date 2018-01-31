@@ -31,5 +31,4 @@ class Menu
     def serve_condiments()
       @hot_dog_condiments.display_dogs
     end
-
 end

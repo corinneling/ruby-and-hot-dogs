@@ -1,20 +1,14 @@
-require './menu'
+require './order'
 require './constants'
 
 class Cook
-  def initialize
-    @menu = Menu.new
+  def initialize(menu)
+    @menu = menu
   end
 
-  # welcomes user to the hot dog stand
-  def welcome
-    puts WELCOME
-    puts UNDERLINE
-  end
-
-  # asks the user if they want to order or leave
+  # welceomes & asks the user if they want to order or leave
   def serve
-    puts HELP_YOU
+    puts WELCOME
     #calls method that asks user to order or leave
     @menu.order_or_not
     # asks the user for input
@@ -35,6 +29,5 @@ class Cook
       puts ERROR
     end
   end
-
 
 end
