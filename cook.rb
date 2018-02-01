@@ -27,7 +27,7 @@ class Cook
   def choose_to_order(serve_number)
     if serve_number == 1
       puts GET_MENU
-      #starts method below
+      # starts method below
       start_order
     elsif serve_number == 2
       # exits hot dog stand
@@ -39,27 +39,25 @@ class Cook
   end
 
   # stops ruby and ask user for input
-  def user_input()
+  def user_input
     # returns user input
     return gets.chomp.to_i
   end
 
   # called if user chose 1 earlier
   # shows all options and stores each selection
-  def start_order()
-    # calls method for printing array in hotdog.rb
-    # if we have this uncommented, then it will print out the list twice...
-    # WEIRD, WHY????
-    # dog.list_dogs
-
+  def start_order
     # this saves the # the user selects
     # want it to save the option in the array they selected, not its index
     dog_choice = dog.list_dogs[ user_input ]
     bun_choice = bun.list_buns[ user_input ]
     condiments_choice = condiments.list_condiments[ user_input ]
+    print_order(dog_choice, bun_choice, condiments_choice)
+  end
+
+  def print_order(dog_choice, bun_choice, condiments_choice)
     # prints order to the command line
     puts "You ordered a #{dog_choice} Dog with a #{bun_choice} Bun and #{condiments_choice}"
 
   end
-
 end
