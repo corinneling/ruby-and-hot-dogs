@@ -2,17 +2,10 @@ require './kitchen/ingredients'
 
 # inherit from Ingredients class
 class Bun < Ingredients
+  attr_accessor :buns
   # create the bun items
   def intialize
-  @bun = ['Whole Wheat', 'Lettuce', 'Flaming Hot Cheeto', 'Cotton Candy', 'Seaweed', 'Classic']
+    @buns = [:wheat, :lettuce, :cheeto, :cotton_candy, :seaweed, :classic]
   end
-
-  def bun
-    @bun
-  end
-
-  def display_bun
-    display_options(bun)
-  end 
 
 end

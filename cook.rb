@@ -41,18 +41,19 @@ class Cook
   # called if user chose 1 earlier
   # shows all options and stores each selection
   def start_order()
-
-    dog.display_options
+    # calls method for printing array in hotdog.rb
+    dog.list_dogs
     dog_choice = user_input
 
-    bun.display_options
+    # NOT WORKING for some reason ??
+    # error: in `start_order': undefined method `show_buns'
+    bun.show_buns
     bun_choice = user_input
 
-    condiments.display_options
+    condiments.display_options(condiments)
     condiments_choice = user_input
-
     # prints order to the command line
-    puts "you ordered #{dog_choice} with a #{bun_choice} and #{condiments_choice}"
+    #  puts "you ordered #{dog_choice} with a #{bun_choice} and #{condiments_choice}"
 
   end
 

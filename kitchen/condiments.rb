@@ -2,16 +2,15 @@ require './kitchen/ingredients'
 
 # inherit from Ingredients class
 class Condiments < Ingredients
+  attr_accessor :condiments
   # create the hot dog items
   def intialize
-  @condiments = ['Nutella', 'String Cheese', 'Fruit Loops', 'Sprinkles', 'Onions', 'Ketchup', 'Ghost Pepper Sauce', 'Mustard']
+    @condiments = [:nutella, :cheese, :fruit, :sprinkles, :onions, :ketchup, :chips, :mustard]
   end
-
-  def top
-    @condiments
-  end
-
-  def display_top
-    display_options(top)
+  # method to use in cook
+  # gives ingredients' display_options
+  # the condiments parameter
+  def show_condiments
+    display_options(condiments)
   end
 end

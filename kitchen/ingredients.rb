@@ -1,12 +1,14 @@
 class Ingredients
 
-# intialize name for prettier output of ingredients
-  # def intialize(name)
-  #  @name = name
-  # end
-
+# attr_accessor :name
+#
+#   def initialize
+#     @name = name
+#   end
   # iterate through ingredient items
   def display_options(item)
+    # display item in terminal to test
+      # p item
     item.each_with_index do |option, index|
       puts "#{index+1}. #{option}"
     end
