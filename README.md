@@ -1,8 +1,8 @@
 # Make a Hot Dog Stand
 
-# Exercise to learn OOP with Ruby
+### Exercise to learn OOP with Ruby
 
-#### Required Features
+##### Required Features
 * Print text to the command line
 * Accept user input from the command line
 * User questionnaire
@@ -16,13 +16,21 @@
 
 #### Structure
 _Stand:_ Will bring everything together to start the program
+
 _Cook:_ Will communicate with the user
+
 _Menu:_ Will store info about the menu options
+
 _Kitchen:_ Will store ingredients files
+
 _Ingredients:_ Will create functionality for the individual ingredients to use
+
 _Hot Dog:_ Will store hot dog information and specific display options
+
 _Bun:_ Will store bun information and specific display options
+
 _Condiments:_ Will store condiments information and specific display options
+
 _Order:_ Will store the user's input and print out the order
 
 #### Testing
