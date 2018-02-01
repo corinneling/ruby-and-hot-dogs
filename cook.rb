@@ -1,8 +1,10 @@
 require './constants'
 
 class Cook
+  # makes vars available to get and set
   attr_accessor :menu, :dog, :bun, :condiments
 
+  # intiazlizes those vars
   def initialize(menu, dog, bun, condiments)
     @menu = menu
     @dog = dog
@@ -15,26 +17,30 @@ class Cook
     puts WELCOME
     menu.order_or_not
     # asks the user for input
-    # sends that input to choose_to_order case method
+    # sends that input to choose_to_order case method below
     choose_to_order(gets.chomp.to_i)
   end
 
-  # case method
+  # choose_to_order case method
   # if user chooses to order then tells user they will get the menu
   # and then shows the hot dog ingredients
   def choose_to_order(serve_number)
     if serve_number == 1
       puts GET_MENU
+      #starts method below
       start_order
     elsif serve_number == 2
+      # exits hot dog stand
       puts BYE
     else
+      # outputs an error
       puts ERROR
     end
   end
 
   # stops ruby and ask user for input
   def user_input()
+    # returns user input
     return gets.chomp.to_i
   end
 
@@ -42,18 +48,17 @@ class Cook
   # shows all options and stores each selection
   def start_order()
     # calls method for printing array in hotdog.rb
-    dog.list_dogs
-    dog_choice = user_input
+    # if we have this uncommented, then it will print out the list twice...
+    # WEIRD, WHY????
+    # dog.list_dogs
 
-    # NOT WORKING for some reason ??
-    # error: in `start_order': undefined method `show_buns'
-    bun.show_buns
-    bun_choice = user_input
-
-    condiments.display_options(condiments)
-    condiments_choice = user_input
+    # this saves the # the user selects
+    # want it to save the option in the array they selected, not its index
+    dog_choice = dog.list_dogs[ user_input ]
+    bun_choice = bun.list_buns[ user_input ]
+    condiments_choice = condiments.list_condiments[ user_input ]
     # prints order to the command line
-    #  puts "you ordered #{dog_choice} with a #{bun_choice} and #{condiments_choice}"
+    puts "You ordered a #{dog_choice} Dog with a #{bun_choice} Bun and #{condiments_choice}"
 
   end
 
