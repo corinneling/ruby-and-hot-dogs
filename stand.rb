@@ -1,5 +1,5 @@
-require './cook'
-require './menu'
+require './customer-service/cook'
+require './customer-service/menu'
 require './kitchen/hotdog'
 require './kitchen/bun'
 require './kitchen/condiments'

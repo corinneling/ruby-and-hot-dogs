@@ -1,7 +1,7 @@
-require './cook'
+require './customer-service/cook'
 
 class Order
-  
+
   def intialize
     @final_masterpiece = []
   end
