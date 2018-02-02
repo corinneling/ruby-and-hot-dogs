@@ -33,9 +33,6 @@ _Condiments:_ Will store condiments information and specific display options
 
 _Order:_ Will store the user's input and print out the order
 
-### Testing
-_Minitest_
-
 ### Features to Complete
 1. Validate user responses
    1. When user gives invalid response, present an error and re-ask the question
