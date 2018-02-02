@@ -1,11 +1,9 @@
-require './kitchen/ingredients'
+require_relative './ingredients'
 
 # inherit from Ingredients class
 class Dog < Ingredients
-  # create the hot dog items
-  # @dog = [:breakfast, :beef, :mystery, :polish, :ice_cream, :sushi]
-
  def list_dogs
+   puts INTRO_DOGS
    # assign array to a variable so ingredients method 'display_options'
    # can read the array properly
    show_dogs = ['Breakfast', 'Beef', 'Mystery', 'Polish', 'Ice Cream', 'Sushi']
@@ -13,7 +11,6 @@ class Dog < Ingredients
  end
 
 end
-
 # get feedback from terminal to test
   # dog = Dog.new()
   # dog.list_dogs

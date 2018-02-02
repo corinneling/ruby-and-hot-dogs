@@ -1,14 +1,13 @@
-require './kitchen/ingredients'
+require_relative './ingredients'
 
 # inherit from Ingredients class
 class Condiments < Ingredients
-  # create the condiments items
-  # see buns.rb for reason for commenting out
-  #  @condiments = [:nutella, :cheese, :fruit, :sprinkles, :onions, :ketchup, :chips, :mustard]
-  # method to use in cook
   # gives ingredients' display_options
   # the condiments parameter
   def list_condiments
+    puts INTRO_CONDIMENTS
+    # assign array to a variable so ingredients method 'display_options'
+    # can read the array properly
     show_condiments = ['Nutella', 'String Cheese', 'Fruit Loops', 'Sprinkles', 'Onions', 'Ketchup', 'Chips', 'Mustard']
     display_options(show_condiments)
   end
