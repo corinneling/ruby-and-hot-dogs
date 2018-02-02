@@ -3,38 +3,13 @@ require_relative './health-inspector'
 
 class Cook < HealthInspector
   # makes vars available to get and set
-  attr_accessor :menu, :dog, :bun, :condiments, :order
+  attr_accessor :dog, :bun, :condiments, :order
   # intiazlizes those vars
-  def initialize menu, dog, bun, condiments, order
-    @menu = menu
+  def initialize dog, bun, condiments, order
     @dog = dog
     @bun = bun
     @condiments = condiments
     @order = order
-  end
-  # welceomes & asks the user if they want to order or leave
-  def serve
-    puts WELCOME
-    menu.order_or_not
-    # asks the user for input
-    # sends that input to choose_to_order case method below
-    choose_to_order(gets.chomp.to_i)
-  end
-  # if user chooses to order then tells user they will get the menu
-  # and then shows the hot dog ingredients
-  def choose_to_order serve_number
-    case serve_number
-    when 1
-      puts GET_MENU
-      # starts method below
-      start_order
-    when 2
-      # exits hot dog stand
-      puts BYE
-    else
-      # outputs an error
-      puts ERROR
-    end
   end
   # stops ruby and ask user for input
   def user_input
@@ -44,6 +19,8 @@ class Cook < HealthInspector
   # called if user chose 1 earlier
   # shows all options and stores each selection
   def start_order
+   # welcomes the user
+     puts WELCOME
     # outputs options to the command line
     # then saves the user's choice in a var
     dog_choice = dog.list_dogs[ user_input ]

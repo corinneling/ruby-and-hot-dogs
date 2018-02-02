@@ -1,5 +1,4 @@
 require './customer-service/cook'
-require './customer-service/menu'
 require './customer-service/order'
 require './kitchen/hotdog'
 require './kitchen/bun'
@@ -11,10 +10,9 @@ class Stand
   dog = Dog.new
   bun = Bun.new
   condiments = Condiments.new
-  menu = Menu.new
   order = Order.new
   # giving cook instances of the classes
-  cook = Cook.new menu, dog, bun, condiments, order
+  cook = Cook.new dog, bun, condiments, order
   # tells cook to start doing stuff
-  cook.serve
+  cook.start_order
 end
