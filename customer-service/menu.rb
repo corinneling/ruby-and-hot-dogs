@@ -2,7 +2,6 @@ require './constants'
 
 class Menu
 
-    # method called in each serve_[item] that gives user a y/n choice
     def order_or_not()
       # NOW_WHAT constant holds the 'order or leave' array
       # assigning that constant to a variable
