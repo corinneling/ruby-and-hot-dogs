@@ -1,7 +1,7 @@
 require './constants'
-require_relative './health-inspector'
+require_relative './manager'
 
-class Cook < HealthInspector
+class Cook < TheManager
   # makes vars available to get and set
   attr_accessor :dog, :bun, :condiments, :order
   # intiazlizes those vars

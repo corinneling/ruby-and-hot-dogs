@@ -1,6 +1,6 @@
-class HealthInspector
+class Manager
 
-    # Error messages here
+    # Manages error messages
 
     # one method requiring at least on item be accepted: dog class will use
     def user_input_empty? some_input
