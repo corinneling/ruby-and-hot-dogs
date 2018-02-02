@@ -1,4 +1,4 @@
-class Manager
+class TheManager
 
     # Manages error messages
 
