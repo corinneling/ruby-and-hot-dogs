@@ -2,7 +2,7 @@
 
 ### Exercise to learn OOP with Ruby
 
-##### Required Features
+### Required Features
 * Print text to the command line
 * Accept user input from the command line
 * User questionnaire
@@ -14,7 +14,7 @@
 * Order description
    * Once the questionnaire is complete, print a sentence describing the user’s order.
 
-#### Structure
+### Structure
 _Stand:_ Will bring everything together to start the program
 
 _Cook:_ Will communicate with the user
@@ -33,5 +33,14 @@ _Condiments:_ Will store condiments information and specific display options
 
 _Order:_ Will store the user's input and print out the order
 
-#### Testing
+### Testing
 _Minitest_
+
+### Features to Complete
+1. Validate user responses
+   1. When user gives invalid response, present an error and re-ask the question
+1. Require quantity of 1 dog for the hot dog order
+1. Make bun choice optional
+1. Allow a maximum of 1 bun for the hot dog order
+1. Make condiment choice optional
+1. Allow for no maximum on condiment choices
