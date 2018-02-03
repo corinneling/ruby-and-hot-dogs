@@ -1,7 +1,6 @@
 require './constants'
-require_relative './manager'
 
-class Cook < TheManager
+class Cook
   # makes vars available to get and set
   attr_accessor :dog, :bun, :condiments, :order
   # intiazlizes those vars
@@ -16,7 +15,6 @@ class Cook < TheManager
     # returns user input
     return gets.chomp.to_i
   end
-  # called if user chose 1 earlier
   # shows all options and stores each selection
   def start_order
    # welcomes the user
