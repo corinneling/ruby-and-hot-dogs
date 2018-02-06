@@ -11,6 +11,3 @@ class Dog < Ingredients
  end
 
 end
-# get feedback from terminal to test
-  # dog = Dog.new()
-  # dog.list_dogs
