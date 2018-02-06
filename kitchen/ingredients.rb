@@ -19,8 +19,11 @@ class Ingredients
     some_input.is_a? Integer
   end
   # raises an error if user inputed a string and not an integer
-  def number_needed some_input
-    raise RuntimeError, "Strings don\'t work here. Please choose a number.", unless some_input.is_a? Integer
+  def number_needed
+    begin
+    raise ArgumentError.new("Strings don\'t work here. Please choose a number.")
+  rescue ArgumentError => e
+     puts e.message
   end
 
   # allows the ingredients to be optional
@@ -29,4 +32,4 @@ class Ingredients
   end
 
 end
-end 
+end
