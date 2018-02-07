@@ -8,4 +8,6 @@ class Ingredients
       puts "#{index+1}. #{option}"
     end
   end
+
+
 end

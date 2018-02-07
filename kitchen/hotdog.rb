@@ -2,6 +2,13 @@ require_relative './ingredients'
 
 # inherit from Ingredients class
 class Dog < Ingredients
+
+  attr_accessor :dog_choice
+
+  def initialize
+    @dog_choice = dog_choice
+  end
+
  def list_dogs
    puts INTRO_DOGS
    # assign array to a variable so ingredients method 'display_options'
