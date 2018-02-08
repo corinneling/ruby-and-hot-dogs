@@ -3,11 +3,6 @@ require_relative './ingredients'
 # inherit from Ingredients class
 class Bun < Ingredients
 
-  attr_accessor :bun_choice
-
-  def initialize
-    @bun_choice = bun_choice
-  end
   #   create the bun items
   def list_buns
     puts INTRO_BUNS
@@ -16,6 +11,12 @@ class Bun < Ingredients
     show_buns = ['Whole Wheat', 'Lettuce', 'Cheeto', 'Cotton Candy', 'Seaweed', 'Classic']
     display_options show_buns
   end
+
+  def start
+    @bun_choice = list_buns[ get_user_input ]
+  end
+
+    # list << "Whole Wheat" << "Lettuce" << "Cheeto"
 
 
 end

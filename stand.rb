@@ -5,14 +5,8 @@ require './kitchen/bun'
 require './kitchen/condiments'
 
 class Stand
-  # creating new instances of
-  # the following classes:
-  dog = Dog.new
-  bun = Bun.new
-  condiments = Condiments.new
-  order = Order.new
-  # giving cook instances of the classes
-  cook = Cook.new dog, bun, condiments, order
+  # giving cook the classes as parameters
+  cook = Cook.new Dog, Bun, Condiments, Order
   # tells cook to start doing stuff
   cook.start_order
 end
