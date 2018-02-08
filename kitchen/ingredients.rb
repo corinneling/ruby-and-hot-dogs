@@ -1,24 +1,23 @@
 class Ingredients
 
-  # iterate through ingredient items
+  # iterates through whatever parameter it is given
   def display_options item
-    # display item in terminal to test
-      # p item
     item.each_with_index do |option, index|
       puts "#{index+1}. #{option}"
     end
   end
 
-  # going to be the parent list that the child ingredients
-  # call on to display stuff
+  # NEED TO FIGURE OUT
+  # array that the children of ingredients can store their items in
   def list *args
     options_list = Array.new
   end
 
+  # stops ruby to get user input, and converts it to an integer
   def get_user_input
      gets.chomp.to_i
   end
-  
+
   # lets user choose if they want to continue to the next
   # step or not when an item is not required
   def choose_yn item, step1, step2
@@ -34,16 +33,16 @@ class Ingredients
     end
    end
 
-   # going to check if user input is valid or not
-    def user_input_valid? some_input
-      if some_input.is_a? Integer
-        puts "thank you, let's continue"
-        some_input
-      else
-        puts "Please choose a number."
-        some_input
-      end
+  # going to check if user input is valid or not by checking if the
+  # parameter it is given is an integer and != nil
+  def user_input_valid? some_input
+    if some_input.is_a? Integer || some_input
+      puts "thank you, let's continue"
+      some_input
+    else
+      puts "Does not compute. Try again."
+      some_input
     end
-
+  end
 
 end

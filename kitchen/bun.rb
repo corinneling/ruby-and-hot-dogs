@@ -1,17 +1,17 @@
 require_relative './ingredients'
 
-# inherit from Ingredients class
+# inherit from Ingredients class in ingredients.rb
 class Bun < Ingredients
 
-  #   create the bun items
+  # INTRO_BUNS found in constatnts.rb
   def list_buns
     puts INTRO_BUNS
-    # assign array to a variable so ingredients method 'display_options'
-    # can read the array properly
     show_buns = ['Whole Wheat', 'Lettuce', 'Cheeto', 'Cotton Candy', 'Seaweed', 'Classic']
+    # takes method from ingredients and passes in the array
     display_options show_buns
   end
 
+  # lists array, gets user choice, and stores it in an instance var
   def start
     @bun_choice = list_buns[ get_user_input ]
   end

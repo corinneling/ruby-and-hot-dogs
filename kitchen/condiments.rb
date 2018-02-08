@@ -1,17 +1,17 @@
 require_relative './ingredients'
 
-# inherit from Ingredients class
+# inherit from Ingredients class in ingredients.rb
 class Condiments < Ingredients
-  # gives ingredients' display_options
-  # the condiments parameter
+
   def list_condiments
+    # INTRO_BUNS found in constatnts.rb
     puts INTRO_CONDIMENTS
-    # assign array to a variable so ingredients method 'display_options'
-    # can read the array properly
     show_condiments = ['Nutella', 'String Cheese', 'Fruit Loops', 'Sprinkles', 'Onions', 'Ketchup', 'Chips', 'Mustard']
+    # takes method from ingredients and passes in the array
     display_options(show_condiments)
   end
 
+  # lists array, gets user choice, and stores it in an instance var
   def start
     @condiment_choice = list_condiments[ get_user_input ]
   end
