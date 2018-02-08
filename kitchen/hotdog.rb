@@ -13,7 +13,8 @@ class Dog < Ingredients
 
   # lists array, gets user choice, and stores it in an instance var
   def start
-   @dog_choice = list_dogs[ get_user_input ]
+     @dog_choice = list_dogs[ get_user_input ]
+     puts "Good choice! You selected the delicious #{@dog_choice} hot dog.\n\n"
   end
 
 end

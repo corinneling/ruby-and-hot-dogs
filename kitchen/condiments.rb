@@ -14,6 +14,7 @@ class Condiments < Ingredients
   # lists array, gets user choice, and stores it in an instance var
   def start
     @condiment_choice = list_condiments[ get_user_input ]
+    puts "You chose #{@condiment_choice} as your condiment.\n\n"
   end
 
 

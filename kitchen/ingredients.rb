@@ -13,15 +13,15 @@ class Ingredients
     options_list = Array.new
   end
 
-  # stops ruby to get user input, and converts it to an integer
+  # stops ruby to get user input
   def get_user_input
      gets.chomp.to_i
   end
 
   # lets user choose if they want to continue to the next
   # step or not when an item is not required
-  def choose_yn item, step1, step2
-    puts "would you like to order #{item}?\n1. Yes\n2. No"
+  def y_or_n step1, step2
+    puts "would you like to order a bun?\n1. Yes\n2. No"
     @input = get_user_input
     if @input == 1
       step1
@@ -31,18 +31,28 @@ class Ingredients
       puts "I don't understand, choose 1 or 2."
       get_user_input
     end
-   end
+  end
 
   # going to check if user input is valid or not by checking if the
   # parameter it is given is an integer and != nil
-  def user_input_valid? some_input
-    if some_input.is_a? Integer || some_input
-      puts "thank you, let's continue"
-      some_input
-    else
-      puts "Does not compute. Try again."
-      some_input
-    end
-  end
+
+    # def check_input item, num
+    #   while item.to_i !== (1..num) || item
+    #     puts "We don't offer that here. Please choose a valid number."
+    #     get_user_input
+    #   end
+    # end
+
+
+  #
+  # def user_input_valid? some_input
+  #   if some_input.is_a? Integer || some_input
+  #     puts "thank you, let's continue"
+  #     some_input
+  #   else
+  #     puts "Does not compute. Try again."
+  #     some_input
+  #   end
+  # end
 
 end

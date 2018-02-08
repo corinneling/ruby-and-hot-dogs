@@ -18,9 +18,7 @@ class Cook
       hello_customer,
       first_step,
       continue_bun,
-      second_step,
       continue_condiment,
-      third_step,
       print_order
     ]
 
@@ -45,7 +43,8 @@ class Cook
     # does user want to order a bun or not?
     # if yes proceed to second_step
     # if no proceed to third_step
-    bun.choose_yn "a bun", second_step, third_step
+    y_or_n
+    # bun.y_or_n var1, var12
   end
 
   def second_step
@@ -55,7 +54,7 @@ class Cook
 
   def continue_condiment
     # same as bun choose_yn, but with different steps to proceed to
-    condiment.choose_yn "some toppings", third_step, print_order
+    y_or_n2
   end
 
   def third_step
@@ -64,9 +63,37 @@ class Cook
   end
 
   def print_order
-    # should print the order in a nice, pretty string
-    # current not set up correctly
-    order.display_final
+    puts "print order test"
+    # puts "This #{@dog_choice} Dog with a #{@bun_choice} Bun and #{@condiments_choice} is beautiful.
+    # Have a good meal, and hope to see you again soon!."
+  end
+
+  def y_or_n
+    puts "Would you like to order a bun?\n1. Yes\n2. No"
+    @input = gets.chomp.to_i
+    case @input
+    when 1 then second_step
+    when 2 then third_step
+    else
+      puts NUM_ERROR
+      while @input > 2
+        y_or_n
+      end
+    end
+  end
+
+  def y_or_n2
+    puts "Would you like to order some condiments?\n1. Yes\n2. No"
+    @input = gets.chomp.to_i
+    case @input
+    when 1 then third_step
+    when 2 then puts "Okay, let's see what you ordered."
+    else
+      puts NUM_ERROR
+      while @input > 2
+        y_or_n2
+      end
+    end
   end
 
 end
