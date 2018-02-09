@@ -22,5 +22,9 @@ class Dog < Ingredients
      puts "Good choice! You selected the delicious #{@dog_choice} hot dog.\n\n"
   end
 
+  def choice
+    @dog_choice
+  end
+
 
 end

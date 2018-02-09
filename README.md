@@ -12,6 +12,8 @@
 * User Flow
    * Make bun choice optional
    * Make condiment choice optional
+* Order description
+   * Once the questionnaire is complete, print a sentence describing the user’s order.
 
 ### Structure
 _Stand:_ Will bring everything together to start the program
@@ -34,5 +36,3 @@ _Condiments:_ Will store condiments information and specific display options
 1. Require quantity of 1 dog for the hot dog order
 1. Allow a maximum of 1 bun for the hot dog order
 1. Allow for no maximum on condiment choices
-1. Order description
-   1. Once the questionnaire is complete, print a sentence describing the user’s order.

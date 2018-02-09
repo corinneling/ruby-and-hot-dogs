@@ -22,4 +22,8 @@ class Bun < Ingredients
     puts "You chose a #{@bun_choice} bun.\n\n"
   end
 
+  def choice
+    @bun_choice
+  end
+
 end

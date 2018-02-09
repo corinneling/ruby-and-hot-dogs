@@ -1,5 +1,3 @@
-
-
 WELCOME = "Welcome to the Hottest Hot Dog Stand in the Universe!
 ----------------------------------------------------
 Let me get you the menu.\n\n"

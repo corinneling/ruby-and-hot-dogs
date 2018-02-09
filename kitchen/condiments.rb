@@ -23,4 +23,8 @@ class Condiments < Ingredients
     puts "You chose #{@condiment_choice} as your condiment.\n\n"
   end
 
+  def choice
+    @condiment_choice
+  end
+
 end

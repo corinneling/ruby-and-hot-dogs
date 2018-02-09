@@ -1,4 +1,4 @@
-require './constants'
+require_relative './constants'
 
 class Cook
   attr_accessor :dog, :bun, :condiment
@@ -21,15 +21,10 @@ class Cook
       print_order
   end
 
-  # methods for the lets_order array
-  def hello_customer
-    # WELCOME stored in constants.rb
-    puts WELCOME
-  end
-
   def print_order
     # not working, i know it's in the wrong place, but where is the right place?
-    puts "You ordered #{@dog_choice}, #{@bun_choice}, #{@condiment_choice}."
+    puts "This #{@dog.choice} hot dog with a #{@bun.choice} bun, and #{@condiment.choice} is beautiful.
+Have a good meal, and hope to see you again soon!"
   end
 
 end
