@@ -7,7 +7,7 @@ class Dog < Ingredients
    @show = ['Breakfast Sausage', 'Beef', 'Mystery Meat', 'Polish', 'Ice Cream', 'Sushi']
   end
 
- def list_dogs
+ def list
    # prompts the user to choose a bun
    display_prompt
    # takes method from ingredients and passes in the array
@@ -15,13 +15,13 @@ class Dog < Ingredients
  end
   # lists array, gets user choice, and stores it in an instance var
   def start
-     @dog_choice = list_dogs[ get_user_input ]
-     puts "Good choice! You selected the delicious #{@dog_choice} hot dog.\n\n"
+     @choice = list[ get_user_input ]
+     puts "Good choice! You selected the delicious #{@choice} hot dog.\n\n"
   end
 
-  def choice
-    @dog_choice
-  end
+  # def choice
+  #   @choice
+  # end
 
 
 end

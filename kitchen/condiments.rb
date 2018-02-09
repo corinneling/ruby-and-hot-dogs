@@ -7,7 +7,7 @@ class Condiments < Ingredients
    @show = ['Nutella', 'String Cheese', 'Fruit Loops', 'Sprinkles', 'Onions', 'Ketchup', 'Chips', 'Mustard']
   end
 
-  def list_condiments
+  def list
     # prompts the user to choose some condiments
     display_prompt
     # takes method from ingredients and passes in the array
@@ -15,12 +15,12 @@ class Condiments < Ingredients
   end
   # lists array, gets user choice, and stores it in an instance var
   def start
-    @condiment_choice = list_condiments[ get_user_input ]
-    puts "You chose #{@condiment_choice} as your condiment.\n\n"
+    @choice = list[ get_user_input ]
+    puts "You chose #{@choice} as your condiment.\n\n"
   end
   # makes the selected option readable
-  def choice
-    @condiment_choice
-  end
+  # def choice
+  #   @choice
+  # end
 
 end

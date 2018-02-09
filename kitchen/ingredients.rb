@@ -10,6 +10,10 @@ class Ingredients
       puts "#{index}. #{option}"
     end
   end
+  # makes the selected option readable
+  def choice
+    @choice
+  end
   # stops ruby to get user input
   def get_user_input
      gets.chomp.to_i
@@ -41,5 +45,6 @@ class Ingredients
       end
     end
   end
+
 
 end
