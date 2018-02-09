@@ -1,12 +1,10 @@
 require_relative './ingredients'
 
-# inherit from Ingredients class in ingredients.rb
 class Dog < Ingredients
 
   def initialize
    @ingredient = 'a dog'
    @show = ['Breakfast Sausage', 'Beef', 'Mystery Meat', 'Polish', 'Ice Cream', 'Sushi']
-   @num = 6
   end
 
  def list_dogs
@@ -15,7 +13,6 @@ class Dog < Ingredients
    # takes method from ingredients and passes in the array
    display_options
  end
-
   # lists array, gets user choice, and stores it in an instance var
   def start
      @dog_choice = list_dogs[ get_user_input ]

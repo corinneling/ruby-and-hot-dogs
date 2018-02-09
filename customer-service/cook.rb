@@ -8,23 +8,21 @@ class Cook
     @bun = Bun.new
     @condiment = Condiments.new
   end
-
   # start interaction with customer
   def start_order
-   # stores the methods below so they can be called in order
-   # or their order can be manipulated later
+      # prints a string to welcome the user
       puts WELCOME
       # lists the dogs and gets user input's choice
       dog.start
+      # gives user the option to order a bun or not
       bun.y_or_n
+      # gives user the option to order condiments or not
       condiment.y_or_n
       print_order
   end
-
+  # prints out the order, takes the new instance of each object and displays the selected options
   def print_order
-    # not working, i know it's in the wrong place, but where is the right place?
-    puts "This #{@dog.choice} hot dog with a #{@bun.choice} bun, and #{@condiment.choice} is beautiful.
-Have a good meal, and hope to see you again soon!"
+    puts "This #{@dog.choice} hot dog with a #{@bun.choice} bun, and #{@condiment.choice} is beautiful. Have a good meal, and hope to see you again soon!"
   end
 
 end
