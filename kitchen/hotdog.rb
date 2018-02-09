@@ -3,12 +3,17 @@ require_relative './ingredients'
 # inherit from Ingredients class in ingredients.rb
 class Dog < Ingredients
 
+  def initialize
+   @ingredient = 'a dog'
+   @show = ['Breakfast Sausage', 'Beef', 'Mystery Meat', 'Polish', 'Ice Cream', 'Sushi']
+   @num = 6
+  end
+
  def list_dogs
-   # INTRO_DOGS found in constatnts.rb
-   puts INTRO_DOGS
-   show_dogs = ['Breakfast', 'Beef', 'Mystery', 'Polish', 'Ice Cream', 'Sushi']
+   # prompts the user to choose a bun
+   display_prompt
    # takes method from ingredients and passes in the array
-   display_options(show_dogs)
+   display_options
  end
 
   # lists array, gets user choice, and stores it in an instance var
@@ -16,5 +21,6 @@ class Dog < Ingredients
      @dog_choice = list_dogs[ get_user_input ]
      puts "Good choice! You selected the delicious #{@dog_choice} hot dog.\n\n"
   end
+
 
 end

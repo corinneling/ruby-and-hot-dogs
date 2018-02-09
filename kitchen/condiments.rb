@@ -3,12 +3,18 @@ require_relative './ingredients'
 # inherit from Ingredients class in ingredients.rb
 class Condiments < Ingredients
 
+  def initialize
+   @ingredient = 'some condiments'
+   @skip = 'Going plain jane, I see.'
+   @show = ['Nutella', 'String Cheese', 'Fruit Loops', 'Sprinkles', 'Onions', 'Ketchup', 'Chips', 'Mustard']
+  end
+
   def list_condiments
-    # INTRO_BUNS found in constatnts.rb
-    puts INTRO_CONDIMENTS
-    show_condiments = ['Nutella', 'String Cheese', 'Fruit Loops', 'Sprinkles', 'Onions', 'Ketchup', 'Chips', 'Mustard']
+    # prompts the user to choose some condiments
+    display_prompt
+
     # takes method from ingredients and passes in the array
-    display_options(show_condiments)
+    display_options
   end
 
   # lists array, gets user choice, and stores it in an instance var
@@ -16,6 +22,5 @@ class Condiments < Ingredients
     @condiment_choice = list_condiments[ get_user_input ]
     puts "You chose #{@condiment_choice} as your condiment.\n\n"
   end
-
 
 end
