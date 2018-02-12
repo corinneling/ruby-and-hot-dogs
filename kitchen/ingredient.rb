@@ -1,7 +1,16 @@
 require_relative './recipe'
 
+# this class regulates the different ingredients
 class Ingredient
  include Recipe
+ # gives ingredients ingredient and show parameters that can be set when
+ # a new instance is created
+ attr_accessor :ingredient, :show
+
+ def initialize ingredient, show
+   @ingredient = ingredient
+   @show = show
+ end
 
   # going to check if user input is valid or not: CURRENTLY NOT WORKING
   def user_input_valid? item

@@ -12,7 +12,7 @@ module Recipe
   # lists array, gets user choice, and stores it in an instance var
   def start
     @choice = list[ get_user_input ]
-    puts "You chose #{@choice} as your condiment.\n\n"
+    puts "You chose #{@choice}.\n\n"
   end
 
   # makes the selected option readable
