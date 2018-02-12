@@ -6,7 +6,7 @@ module Recipe
 
   # stops ruby to get user input
   def get_user_input
-     gets.chomp.to_i
+     user_input_valid gets.chomp
   end
 
   # lists array, gets user choice, and stores it in an instance var

@@ -14,6 +14,8 @@
    * Make condiment choice optional
 * Order description
    * Once the questionnaire is complete, print a sentence describing the user’s order.
+* Validate user responses
+   * When user gives invalid response, present an error and re-ask the question
 
 ### Structure
 _Stand:_ Will bring everything together to start the program
@@ -27,8 +29,6 @@ _Recipe:_ Will prompt user and store choices
 _Menu:_ Will display the prompt and the options to choose from
 
 ### Features to Complete
-1. Validate user responses
-   1. When user gives invalid response, present an error and re-ask the question
 1. Require quantity of 1 dog for the hot dog order
 1. Allow a maximum of 1 bun for the hot dog order
 1. Allow for no maximum on condiment choices

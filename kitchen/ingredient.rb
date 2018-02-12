@@ -5,24 +5,27 @@ class Ingredient
  include Recipe
  # gives ingredients ingredient and show parameters that can be set when
  # a new instance is created
- attr_accessor :ingredient, :show
+ attr_accessor :ingredient, :show, :num
 
- def initialize ingredient, show
+ def initialize ingredient, show, num
    @ingredient = ingredient
    @show = show
+   @num = num
  end
 
-  # going to check if user input is valid or not: CURRENTLY NOT WORKING
-  def user_input_valid? item
-    if (item) > @num
-      puts "We don't offer that here. Please choose a valid number."
-      start
-    elsif item.between?(1,@num)
-      puts 'good'
-    else
-      'please choose a number'
-    end
-  end
+ # checks if the user input is an integer and between two numbers
+ def user_input_valid input
+   if integer?(input) && input.to_i.between?(0, @num)
+     return input.to_i - 1
+   else
+     puts 'Sorry, we don\'t carry that here. Please choose something else.'
+     get_user_input
+   end
+ end
+
+ def integer? input
+   input.to_i.to_s == input
+ end
 
   # lets the user choose if they want to continue onto the next step or not
   def y_or_n

@@ -9,7 +9,7 @@ module Menu
   # iterates through whatever parameter it is given
   def display_options
     @show.each_with_index do |option, index|
-      puts "#{index}. #{option}"
+      puts "#{index+1}. #{option}"
     end
   end
 

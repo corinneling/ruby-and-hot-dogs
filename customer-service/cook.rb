@@ -4,9 +4,9 @@ class Cook
   attr_accessor :dog, :bun, :condiment
   # create instances of the classes for the cook class
   def initialize ingredient
-    @dog = Ingredient.new 'a dog', ['Invisible Dog', 'Breakfast Sausage', 'Beef', 'Mystery Meat', 'Polish', 'Ice Cream', 'Sushi']
-    @bun = Ingredient.new 'a bun', ['Classic', 'Whole Wheat', 'Lettuce', 'Cheeto', 'Cotton Candy', 'Seaweed']
-    @condiment = Ingredient.new 'some condiments', ['Nutella', 'String Cheese', 'Fruit Loops', 'Sprinkles', 'Onions', 'Ketchup', 'Chips', 'Mustard']
+    @dog = Ingredient.new 'a dog', ['Invisible Dog', 'Breakfast Sausage', 'Beef', 'Mystery Meat', 'Polish', 'Ice Cream', 'Sushi'], 7
+    @bun = Ingredient.new 'a bun', ['Classic', 'Whole Wheat', 'Lettuce', 'Cheeto', 'Cotton Candy', 'Seaweed'], 6
+    @condiment = Ingredient.new 'some condiments', ['Nutella', 'String Cheese', 'Fruit Loops', 'Sprinkles', 'Onions', 'Ketchup', 'Chips', 'Mustard'], 8
   end
   # start interaction with customer
   def start_order
