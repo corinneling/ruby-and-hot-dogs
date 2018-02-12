@@ -20,15 +20,11 @@ _Stand:_ Will bring everything together to start the program
 
 _Cook:_ Will communicate with the user
 
-_Kitchen:_ Will store ingredients files
-
 _Ingredients:_ Will create functionality for the individual ingredients to use
 
-_Hot Dog:_ Will store hot dog information and specific display options
+_Recipe:_ Will prompt user and store choices
 
-_Bun:_ Will store bun information and specific display options
-
-_Condiments:_ Will store condiments information and specific display options
+_Menu:_ Will display the prompt and the options to choose from
 
 ### Features to Complete
 1. Validate user responses
