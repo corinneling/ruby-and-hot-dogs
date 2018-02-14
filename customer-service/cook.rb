@@ -22,7 +22,7 @@ class Cook
   end
   # prints out the order, takes the new instance of each object and displays the selected options
   def print_order
-    puts "This #{@dog.choice} hot dog with a #{@bun.choice} bun, and #{@condiment.choice} is beautiful. You should go into hot dog art."
+    puts "This #{dog.choice} hot dog with a #{bun.choice} bun, and #{condiment.choice} is beautiful. You should go into hot dog art."
   end
 
 end
